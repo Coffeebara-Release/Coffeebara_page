@@ -47,9 +47,9 @@
               <div class="@[480px]:p-4">
                 <div
                   class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7ShlpXAgHHHM4XBQv07uSWues5j0CzxytT-GftoYD6F_WnGPb0sdvpTT3JAjQkFqygG_qwuGtavPSF71P98-6RN0gvsisovmWwB6ncTYK9kSsgo_G0Tnz8p7sQHdCgb0_U907eRrtnLg0fPrhEx-3MOPZfM5ap_awcLX59oO0m3BgmVtpbsNk1rWJclXdKCzK0z--GCFi24rlty6EIWVYUDlk3L1YBallabJrMqizNKCknL0Uog7DcScGjvjEpRWQ65BjR6ci1A");'
+                  style='background-image: url("images/recognition.png");'
                 >
-                  <div class="flex flex-col gap-2 text-center">
+                  <!-- <div class="flex flex-col gap-2 text-center">
                     <h1
                       class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
                     >
@@ -58,50 +58,63 @@
                     <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
                       Our innovative technology transforms used coffee cups into valuable resources, contributing to a sustainable future.
                     </h2>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Sorting Mechanism</h2>
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recognition By Image Analyzer</h2>
             <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Our advanced sorting system uses optical sensors and AI to identify and separate different types of coffee cups, ensuring only recyclable materials are processed.
+              Our system utilizes a YOLO-based AI model to automatically determine the size of a cup and whether a holder is present. 
+              By applying state-of-the-art visual object detection techniques, the model accurately analyzes real-time images to 
+              identify and classify cup attributes. This enables fully automated and reliable inspection for downstream processes 
+              in manufacturing or quality control environments.
             </p>
-            <div class="flex w-full grow bg-white @container p-4">
-              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-xl flex">
+            <div class="@container">
+              <div class="@[480px]:p-4">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4mglFiECRZArW3G2ZVKTeGNlkSgpSClUdZ6POkGsmiRkt0vPCpd7PrcCNWH_VrJmYThwJcQFK62XRhGl9XkhnZ68_0zFlzCXUZFbH0d8NRgGVNZDhteblR_m2jZRDFedkBUQKdO4OYN7SBbhkbB_1c7lBcZv8ubCJwZumhxBYb2kik6H_MOhzQEJVANeniT_QuG6cnzjQsi6vidSayRmbwbzqON2FcVzkf9RIBHhU0E2PZtqCXkDDIcWsYC3wZnEkUwWhGnGWdw");'
-                ></div>
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: url("images/separation.png");'
+                >
+                </div>
               </div>
             </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Cleaning Process</h2>
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Separation Process</h2>
             <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              A multi-stage cleaning process removes any remaining liquids or contaminants from the cups, preparing them for material processing.
+              In this stage, our system automatically separates the lid from the cup and classifies both the holder and straw. 
+              All of these processes operate in parallel, allowing the handling and sorting of multiple cups simultaneously. 
+              Using precise robotic mechanisms, the system ensures efficient and accurate separation and classification, 
+              enabling high-throughput and reliable operation for real-world production environments.
             </p>
-            <div class="flex w-full grow bg-white @container p-4">
-              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-xl flex">
+            <div class="@container">
+              <div class="@[480px]:p-4">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBWjn47GSX6fbpw9EoJzzYspMDOaQ-qiorNWsa3i1NssrK_68mPzd4eKLP493nAM5sK6xieM4MBwpPeLFRvYBSTYiYBXIe9cLpXcOXT47GrnSiHfI30QG2KdUZggxhXtgnpEWCMaQVUYe9VWGtNk8tbtV8fScXo5A0UK_spH47me9Q7CqAHEd1BTwVz9rPntt44tOw5HL2T4wcOZfq6mX-WZjWsDE5bq7A3o1-RoBCGEKV7LV8VodUVcirVOeFoa89_jankXlGKXQ");'
-                ></div>
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: url("images/cleansing.png");'
+                >
+                </div>
               </div>
             </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Material Processing</h2>
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Cleansing</h2>
             <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              The cleaned cups are shredded and processed into high-quality recycled materials, suitable for various applications, including new products.
+              In this stage, high-pressure water jets are used to thoroughly wash the inside of each cup, 
+              ensuring that no residue remains. This advanced cleaning process enables the hygienic and efficient 
+              recycling of single-use plastic cups, helping to promote sustainability and facilitate the reuse of plastic materials.
             </p>
-            <div class="flex w-full grow bg-white @container p-4">
-              <div class="w-full gap-1 overflow-hidden bg-white @[480px]:gap-2 aspect-[3/2] rounded-xl flex">
+            <div class="@container">
+              <div class="@[480px]:p-4">
                 <div
-                  class="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
-                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSaRHCqR6vZpXrgQBn8gIjYofXK5rQC97qC2GLEvnjqY5Yzj4hoF5ecqEyvcBihYXSuzYEsYhzaf8Lrftqa5fzBOIX6ZkR5fVNsX49pAF5LLLreGqTnrpKRQVrcgMiRXXGNl-14LVQ7LSHrNHZR2_aNQmB4Dm-ZnYFK_oW4miK-XWeZh4mjmUOcHqrIRFwqD7SUO8-iZC2BElTtyqW1Rdb3oY3HJ9QuvVTeU0bdGyR5puBL7uga2QrVeJwr4KqPV9vO3kCrGYK3Q");'
-                ></div>
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: url("images/loading.png");'
+                >
+                </div>
               </div>
             </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Innovative Technologies</h2>
+            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Loading Process</h2>
             <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Our patented technologies ensure efficient and effective recycling, minimizing waste and maximizing resource recovery. We are committed to continuous innovation to
-              improve our processes.
+              At this stage, cups are automatically sorted and stacked according to their size. 
+              This size-based loading process maximizes the system’s capacity and efficiency, allowing for optimal storage 
+              and organization of cleaned cups. By neatly grouping cups by size, the system greatly improves overall 
+              throughput and readiness for subsequent recycling or reuse processes.
             </p>
             <footer class="flex justify-center">
                 <div class="flex max-w-[960px] flex-1 flex-col">
