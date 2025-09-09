@@ -1,135 +1,163 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link rel="icon" href="images/coffeebara_with_background.png" type="image/png">
 
-    <title>Coffeebara</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="icon" href="images/coffeebara_with_background.png" type="image/png">
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script> 
-  </head>
-  <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f3f4] px-10 py-3">
-            <div class="flex items-center gap-4 text-[#111518]">
-                <a href="index.html" class="flex items-center gap-4 text-[#111518]" style="cursor:pointer;">
-                    <div class="size-8">
-                    <!-- <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                        d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
-                        fill="currentColor"
-                        ></path>
-                    </svg> -->
-                    <img src="images/coffeebara_with_background.png" alt="커피바라 메인 이미지" width="100" height="150">
-                    </div>
-                    <h2 class="text-[#111518] text-3xl font-bold leading-tight tracking-[-0.015em]">Coffeebara</h2>
-                </a>
-            </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="about.html">About</a>
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="technology.html">Technology</a>
-              <a class="text-[#111518] text-sm font-medium leading-normal" href="contact.html">Contact</a>
-            </div>
-            <a href="contact.html">
-                <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#1993e5] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-                >
-                <span class="truncate">Request a Quote</span>
-                </button>
+  <title>Coffeebara</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    /* Added for the font */
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+    style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      <header class="fixed top-0 left-0 right-0 z-30 border-b border-[#f0f3f4]/80 bg-white/70 backdrop-blur-md">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-10">
+          <div class="flex h-14 items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 sm:gap-3 text-[#111518]">
+              <img src="images/coffeebara_with_background.png" alt="커피바라 메인 이미지" class="h-7 w-7 object-contain" />
+              <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-[-0.015em]">Coffeebara</h1>
             </a>
-          </div>
-        </header>
-        <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: url("images/recognition.png");'
-                >
-                  <!-- <div class="flex flex-col gap-2 text-center">
-                    <h1
-                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
-                    >
-                      Revolutionizing Coffee Cup Recycling
-                    </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Our innovative technology transforms used coffee cups into valuable resources, contributing to a sustainable future.
-                    </h2>
-                  </div> -->
-                </div>
+
+            <nav class="hidden md:flex items-center gap-8">
+              <div class="flex items-center gap-8">
+                <a class="text-[#111518] text-sm font-medium" href="about.html">About</a>
+                <a class="text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
+                <a class="text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
               </div>
-            </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recognition By Image Analyzer</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Our system utilizes a YOLO-based AI model to automatically determine the size of a cup and whether a holder is present. 
-              By applying state-of-the-art visual object detection techniques, the model accurately analyzes real-time images to 
-              identify and classify cup attributes. This enables fully automated and reliable inspection for downstream processes 
-              in manufacturing or quality control environments.
-            </p>
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: url("images/separation.png");'
-                >
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Separation Process</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              In this stage, our system automatically separates the lid from the cup and classifies both the holder and straw. 
-              All of these processes operate in parallel, allowing the handling and sorting of multiple cups simultaneously. 
-              Using precise robotic mechanisms, the system ensures efficient and accurate separation and classification, 
-              enabling high-throughput and reliable operation for real-world production environments.
-            </p>
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: url("images/cleansing.png");'
-                >
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Cleansing</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              In this stage, high-pressure water jets are used to thoroughly wash the inside of each cup, 
-              ensuring that no residue remains. This advanced cleaning process enables the hygienic and efficient 
-              recycling of single-use plastic cups, helping to promote sustainability and facilitate the reuse of plastic materials.
-            </p>
-            <div class="@container">
-              <div class="@[480px]:p-4">
-                <div
-                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: url("images/loading.png");'
-                >
-                </div>
-              </div>
-            </div>
-            <h2 class="text-[#121516] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Loading Process</h2>
-            <p class="text-[#121516] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              At this stage, cups are automatically sorted and stacked according to their size. 
-              This size-based loading process maximizes the system’s capacity and efficiency, allowing for optimal storage 
-              and organization of cleaned cups. By neatly grouping cups by size, the system greatly improves overall 
-              throughput and readiness for subsequent recycling or reuse processes.
-            </p>
-            <footer class="flex justify-center">
-                <div class="flex max-w-[960px] flex-1 flex-col">
-                    <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-                    <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                        <a class="text-[#617989] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                        <a class="text-[#617989] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
-                    </div>
-                    <p class="text-[#617989] text-base font-normal leading-normal">@2024 Coffeebara Solutions. All rights reserved.</p>
-                    </footer>
-                </div>
-            </footer>
+              <a href="contact.html">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em]">
+                  Request a Quote
+                </button>
+              </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+              </svg>
+            </button>
           </div>
         </div>
-      </div>
+
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
+          <div class="mx-auto max-w-7xl px-4 py-4 space-y-4">
+            <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
+            <a class="block text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
+            <a class="block text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+            <a href="contact.html" class="block">
+              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
+                Request a Quote
+              </button>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex flex-1 justify-center py-5 pt-20">
+        <div class="w-full max-w-5xl px-4 sm:px-6 lg:px-8">
+
+          <section class="flex flex-col items-center gap-4 py-10">
+            <div class="w-full max-w-3xl">
+              <div class="h-80 w-full rounded-3xl bg-contain bg-center bg-no-repeat"
+                style='background-image: url("images/recognition.png");'></div>
+            </div>
+            <div class="w-full max-w-3xl">
+              <h2 class="text-[#121516] text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-center">
+                Recognition By Image Analyzer</h2>
+              <p class="text-[#121516] text-base font-normal leading-normal text-center">
+                Our system utilizes a YOLO-based AI model to automatically determine the size of a cup and whether a
+                holder is present. By applying state-of-the-art visual object detection techniques, the model accurately
+                analyzes real-time images to identify and classify cup attributes. This enables fully automated and
+                reliable inspection for downstream processes in manufacturing or quality control environments.
+              </p>
+            </div>
+          </section>
+
+          <section class="flex flex-col items-center gap-4 py-10">
+            <div class="w-full max-w-3xl">
+              <div class="h-80 w-full rounded-3xl bg-contain bg-center bg-no-repeat"
+                style='background-image: url("images/separation.png");'></div>
+            </div>
+            <div class="w-full max-w-3xl">
+              <h2 class="text-[#121516] text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-center">
+                Separation Process</h2>
+              <p class="text-[#121516] text-base font-normal leading-normal text-center">
+                In this stage, our system automatically separates the lid from the cup and classifies both the holder
+                and straw. All of these processes operate in parallel, allowing the handling and sorting of multiple
+                cups simultaneously. Using precise robotic mechanisms, the system ensures efficient and accurate
+                separation and classification, enabling high-throughput and reliable operation for real-world production
+                environments.
+              </p>
+            </div>
+          </section>
+
+          <section class="flex flex-col items-center gap-4 py-10">
+            <div class="w-full max-w-3xl">
+              <div class="h-80 w-full rounded-3xl bg-contain bg-center bg-no-repeat"
+                style='background-image: url("images/cleansing.png");'></div>
+            </div>
+            <div class="w-full max-w-3xl">
+              <h2 class="text-[#121516] text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-center">
+                Cleansing</h2>
+              <p class="text-[#121516] text-base font-normal leading-normal text-center">
+                In this stage, high-pressure water jets are used to thoroughly wash the inside of each cup, ensuring
+                that no residue remains. This advanced cleaning process enables the hygienic and efficient recycling of
+                single-use plastic cups, helping to promote sustainability and facilitate the reuse of plastic
+                materials.
+              </p>
+            </div>
+          </section>
+
+          <section class="flex flex-col items-center gap-4 py-10">
+            <div class="w-full max-w-3xl">
+              <div class="h-80 w-full rounded-3xl bg-contain bg-center bg-no-repeat"
+                style='background-image: url("images/loading.png");'></div>
+            </div>
+            <div class="w-full max-w-3xl">
+              <h2 class="text-[#121516] text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 text-center">
+                Loading Process</h2>
+              <p class="text-[#121516] text-base font-normal leading-normal text-center">
+                At this stage, cups are automatically sorted and stacked according to their size. This size-based
+                loading process maximizes the system’s capacity and efficiency, allowing for optimal storage and
+                organization of cleaned cups. By neatly grouping cups by size, the system greatly improves overall
+                throughput and readiness for subsequent recycling or reuse processes.
+              </p>
+            </div>
+          </section>
+
+          <footer class="flex justify-center">
+            <div class="flex max-w-[960px] flex-1 flex-col">
+              <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
+                <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                  <a class="text-[#617989] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                  <a class="text-[#617989] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                </div>
+                <p class="text-[#617989] text-base font-normal leading-normal">@2024 Coffeebara Solutions. All rights
+                  reserved.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
     </div>
-  </body>
+  </div>
+  <script>
+    // 모바일 메뉴 토글
+    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
 </html>
