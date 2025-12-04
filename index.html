@@ -1,202 +1,205 @@
 <!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coffeebara</title>
+  <title>Coffeebara - AI Robotics Solution</title>
 
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link rel="icon" href="images/coffeebara_with_background.png" type="image/png" />
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="icon" href="images/coffeebara_logo_white.png" type="image/png" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-tech { font-family: 'Space Grotesk', sans-serif; }
+    
+    /* 텍스트 그라데이션 효과 */
+    .text-gradient {
+      background: linear-gradient(to right, #1993e5, #4facfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
 
-<body class="bg-white" style='font-family: "Space Grotesk","Noto Sans",sans-serif;'>
+<body class="bg-white text-slate-900">
 
-  <!-- 고정 헤더 (반투명 + 블러) -->
-  <header class="fixed top-0 left-0 right-0 z-30 border-b border-[#f0f3f4]/80 bg-white/70 backdrop-blur-md">
-    <div class="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-10">
-      <div class="flex h-14 items-center justify-between">
-        <a href="index.html" class="flex items-center gap-2 sm:gap-3 text-[#111518]">
-          <img src="images/coffeebara_with_background.png" alt="커피바라 메인 이미지" class="h-7 w-7 object-contain" />
-          <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-[-0.015em]">Coffeebara</h1>
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md transition-all duration-300">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="flex h-20 items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <div class="relative w-8 h-8 overflow-hidden rounded-full bg-white p-1 transition-transform group-hover:scale-110">
+             <img src="images/coffeebara_with_background.png" alt="Logo" class="w-full h-full object-contain" />
+          </div>
+          <span class="text-xl font-bold text-white tracking-tight">Coffeebara</span>
         </a>
 
-        <!-- 데스크톱 네비 -->
-        <nav class="hidden md:flex items-center gap-8">
-          <div class="flex items-center gap-8">
-            <a class="text-[#111518] text-sm font-medium" href="about.html">About</a>
-            <a class="text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-            <a class="text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
-          </div>
-          <a href="contact.html">
-            <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em]">
-              Request a Quote
-            </button>
+        <nav class="hidden md:flex items-center gap-10">
+          <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="about.html">About</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="technology.html">Technology</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-white transition-colors" href="contact.html">Contact</a>
+          <a href="contact.html" class="group relative px-6 py-2.5 overflow-hidden rounded-full bg-[#1993e5] text-white shadow-lg transition-all hover:bg-[#157bbd] hover:shadow-[#1993e5]/50">
+            <div class="absolute inset-0 w-0 bg-white/20 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+            <span class="relative text-sm font-bold">Request a Quote</span>
           </a>
         </nav>
 
-        <!-- 모바일 메뉴 버튼 -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
       </div>
     </div>
-
-    <!-- 모바일 드롭다운 메뉴 -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
-      <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
-        <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
-        <a class="block text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-        <a class="block text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
-        <a href="contact.html" class="block">
-          <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
-            Request a Quote
-          </button>
-        </a>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10 absolute w-full">
+      <div class="px-6 py-4 space-y-4">
+        <a class="block text-gray-300 font-medium" href="about.html">About</a>
+        <a class="block text-gray-300 font-medium" href="technology.html">Technology</a>
+        <a class="block text-gray-300 font-medium" href="contact.html">Contact</a>
+        <a href="contact.html" class="block w-full text-center py-3 rounded-lg bg-[#1993e5] text-white font-bold">Request a Quote</a>
       </div>
     </div>
   </header>
 
-  <!-- 히어로 (첫 화면 가득) -->
-  <section id="hero" class="relative min-h-screen w-full overflow-hidden bg-black">
-
-    <img src="images/noco.png" alt="" aria-hidden="true"
-      class="pointer-events-none select-none absolute inset-0 h-full w-full object-cover blur-2xl opacity-60 scale-110" />
-
-
-    <!-- 원본 이미지: 가로 폭에 맞추고 비율 유지(위/아래는 배경으로 채움) -->
-    <div class="relative z-10 flex min-h-screen items-center justify-center">
-      <img src="images/noco.png" alt="Coffeebara 메인 비주얼" class="w-full h-screen object-contain" />
+  <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+    
+    <div class="absolute inset-0 z-0">
+        <img src="images/noco.png" class="w-full h-full object-cover opacity-50 scale-105" alt="NOCO Robot">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black"></div>
     </div>
 
-    <!-- 스크롤 인디케이터 -->
-    <a href="#main-content"
-      class="group absolute bottom-6 left-1/2 -translate-x-1/2 z-20 inline-flex flex-col items-center text-white/80">
-      <span class="text-xs">Scroll</span>
-      <svg class="mt-1 h-6 w-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </a>
-  </section>
+    <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm mb-8 animate-fade-in-up">
+        <span class="w-2 h-2 rounded-full bg-[#1993e5] animate-pulse"></span>
+        <span class="text-sm font-medium text-white tracking-wide">Official Exhibitor at <span class="font-bold text-[#1993e5]">CES 2026</span></span>
+      </div>
 
-  <!-- 본문 -->
-  <main id="main-content" class="relative z-0">
-    <!-- 헤더 높이(56px)만큼 상단 여백 추가: 히어로 아래 첫 섹션이 헤더와 겹치지 않도록 -->
-    <div class="pt-6 md:pt-8"></div>
+      <h1 class="text-5xl sm:text-7xl md:text-8xl font-black text-white leading-tight mb-6 tracking-tight">
+        Beyond Waste, <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Into Automation.</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        The world's first fully automated cup recycling robot powered by <strong>Edge AI</strong> & <strong>Adaptive Robotics</strong>. <br class="hidden sm:block"> We turn chaos into order.
+      </p>
 
-    <!-- 레이아웃 컨테이너 -->
-    <div class="px-4 sm:px-8 md:px-20 lg:px-40 py-5 flex justify-center">
-      <div class="layout-content-container flex flex-col max-w-[960px] w-full">
-
-        <!-- Key Features -->
-        <h2 class="text-[#111518] text-xl sm:text-[22px] font-bold tracking-[-0.015em] px-4 pb-3 pt-2">
-          Key Features
-        </h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 p-4">
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#dce1e5] bg-white p-4 flex-col">
-            <div class="text-[#111518]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Z">
-                </path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h3 class="text-[#111518] text-base font-bold leading-tight">Automatic Recycling Process
-              </h3>
-              <p class="text-[#637988] text-sm">Intelligent sensors automatically sort cups by size and
-                material type.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-1 gap-3 rounded-lg border border-[#dce1e5] bg-white p-4 flex-col">
-            <div class="text-[#111518]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M174,47.75a254.19,254.19,0,0,0-41.45-38.3,8,8,0,0,0-9.18,0A254.19,254.19,0,0,0,82,47.75C54.51,79.32,40,112.6,40,144a88,88,0,0,0,176,0C216,112.6,201.49,79.32,174,47.75ZM128,216a72.08,72.08,0,0,1-72-72c0-57.23,55.47-105,72-118,16.53,13,72,60.75,72,118A72.08,72.08,0,0,1,128,216Zm55.89-62.66a57.6,57.6,0,0,1-46.56,46.55A8.75,8.75,0,0,1,136,200a8,8,0,0,1-1.32-15.89c16.57-2.79,30.63-16.85,33.44-33.45a8,8,0,0,1,15.78,2.68Z">
-                </path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h3 class="text-[#111518] text-base font-bold leading-tight">Efficient Cleaning</h3>
-              <p class="text-[#637988] text-sm">Advanced cleaning technology ensures cups are ready for
-                recycling.</p>
-            </div>
-          </div>
-
-          <div
-            class="flex flex-1 gap-3 rounded-lg border border-[#dce1e5] bg-white p-4 flex-col sm:col-span-2 lg:col-span-1">
-            <div class="text-[#111518]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                <path
-                  d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,16V152h-28.7A15.86,15.86,0,0,0,168,156.69L148.69,176H107.31L88,156.69A15.86,15.86,0,0,0,76.69,152H48V48Zm0,160H48V168H76.69L96,187.31A15.86,15.86,0,0,0,107.31,192h41.38A15.86,15.86,0,0,0,160,187.31L179.31,168H208v40Z">
-                </path>
-              </svg>
-            </div>
-            <div class="flex flex-col gap-1">
-              <h3 class="text-[#111518] text-base font-bold leading-tight">High Capacity</h3>
-              <p class="text-[#637988] text-sm">Large capacity reduces the need for frequent emptying.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <section class="@container">
-          <div
-            class="flex flex-col justify-end gap-4 sm:gap-6 px-4 py-8 sm:py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-            <div class="flex flex-col gap-2 text-center">
-              <h2
-                class="text-[#111518] tracking-light text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] mx-auto">
-                Ready to make a difference?
-              </h2>
-              <p class="text-[#111518] text-sm sm:text-base max-w-[720px] mx-auto px-4">
-                Contact us today to learn how Coffeebara can transform your recycling efforts.
-              </p>
-            </div>
-            <div class="flex justify-center px-4">
-              <div class="w-full max-w-[300px]">
-                <a href="contact.html" class="w-full">
-                  <button class="w-full h-12 rounded-lg bg-[#1993e5] text-white text-base font-bold tracking-[0.015em]">
-                    Request a Quote
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="technology.html" class="px-8 py-4 rounded-full bg-[#1993e5] text-white font-bold hover:bg-[#157bbd] transition-all hover:scale-105 shadow-[0_0_20px_rgba(25,147,229,0.5)]">
+          Explore Technology
+        </a>
+        <a href="#video-demo" class="px-8 py-4 rounded-full border border-white/30 text-white font-medium hover:bg-white/10 transition-all flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          Watch Demo
+        </a>
       </div>
     </div>
-  </main>
 
-  <!-- 푸터 -->
-  <footer class="flex justify-center border-t border-[#f0f3f4]">
-    <div class="flex max-w-[960px] w-full flex-col">
-      <div class="flex flex-col gap-4 sm:gap-6 px-5 py-8 sm:py-10 text-center @container">
-        <div
-          class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 @[480px]:justify-around">
-          <a class="text-[#637988] text-sm sm:text-base" href="#">Privacy Policy</a>
-          <a class="text-[#637988] text-sm sm:text-base" href="#">Terms of Service</a>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-70 animate-bounce">
+        <span class="text-xs text-white/60 uppercase tracking-widest">Scroll Down</span>
+        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+    </div>
+  </section>
+
+
+  <section id="features" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-slate-900">Why Coffeebara?</h2>
+        <p class="text-slate-500 text-lg max-w-2xl mx-auto">We replace inefficient manual labor with high-precision engineering.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-100 hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-[#1993e5] group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Edge AI Vision</h3>
+          <p class="text-slate-600 leading-relaxed">Runs locally on Low-Cost HW with <strong>&lt;1s latency</strong>. Detects cups, lids, and straws in real-time without cloud dependency.</p>
         </div>
-        <p class="text-[#637988] text-sm sm:text-base">© 2024 Coffeebara. All rights reserved.</p>
+
+        <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-100 hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><path d="M12 4v8"/><path d="M12 12l-4 4"/><path d="M12 12l4 4"/><rect x="8" y="16" width="8" height="4" rx="1"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Adaptive Robotics</h3>
+          <p class="text-slate-600 leading-relaxed">Soft gripper mechanism handles <strong>unstructured objects</strong>—crushed or sticky cups—with 99% separation success rate.</p>
+        </div>
+
+        <div class="group p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-100 hover:shadow-xl transition-all duration-300">
+          <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 text-purple-600 group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Modular Design</h3>
+          <p class="text-slate-600 leading-relaxed">Scalable architecture. From single units for cafes to <strong>industrial clusters</strong> for smart factories and campuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-20 bg-[#111518] text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-[#1993e5] mb-2">5s</div>
+          <div class="text-sm text-gray-400 uppercase tracking-wide">Processing Time</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-white mb-2">99%</div>
+          <div class="text-sm text-gray-400 uppercase tracking-wide">Accuracy</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">10x</div>
+          <div class="text-sm text-gray-400 uppercase tracking-wide">Volume Reduction</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-purple-400 mb-2">24/7</div>
+          <div class="text-sm text-gray-400 uppercase tracking-wide">Autonomous Operation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-24 bg-white text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Ready to Automate Your Waste Stream?</h2>
+      <p class="text-lg text-slate-500 mb-10">Join the revolution of smart recycling. Meet us at CES 2026 or request a demo today.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="px-8 py-4 rounded-lg bg-[#1993e5] text-white font-bold hover:bg-[#157bbd] transition-colors shadow-lg shadow-blue-200">
+          Request a Quote
+        </a>
+        <a href="mailto:contact@coffeebara.com" class="px-8 py-4 rounded-lg border border-slate-200 text-slate-700 font-bold hover:bg-slate-50 transition-colors">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-50 border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+         <img src="images/coffeebara_with_background.png" alt="Logo" class="w-6 h-6 grayscale opacity-50">
+         <span class="text-sm font-bold text-slate-400">Coffeebara</span>
+      </div>
+      <div class="text-sm text-slate-500">© 2024 Coffeebara Solutions. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a href="#" class="text-slate-400 hover:text-[#1993e5] transition-colors"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
       </div>
     </div>
   </footer>
 
-  <!-- 스크립트 -->
   <script>
-    // 모바일 메뉴 토글
-    document.getElementById('mobile-menu-btn').addEventListener('click', function () {
-      const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
       menu.classList.toggle('hidden');
     });
   </script>
 </body>
-
 </html>

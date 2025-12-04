@@ -1,20 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
   <link rel="icon" href="images/coffeebara_with_background.png" type="image/png">
 
-  <title>Coffeebara</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <title>About Us - Coffeebara</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
     style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
-      <!-- 고정 헤더 (반투명 + 블러) -->
+      
       <header class="fixed top-0 left-0 right-0 z-30 border-b border-[#f0f3f4]/80 bg-white/70 backdrop-blur-md">
         <div class="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-10">
           <div class="flex h-14 items-center justify-between">
@@ -23,7 +24,6 @@
               <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-[-0.015em]">Coffeebara</h1>
             </a>
 
-            <!-- 데스크톱 네비 -->
             <nav class="hidden md:flex items-center gap-8">
               <div class="flex items-center gap-8">
                 <a class="text-[#111518] text-sm font-medium" href="about.html">About</a>
@@ -31,13 +31,12 @@
                 <a class="text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
               </div>
               <a href="contact.html">
-                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em]">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors">
                   Request a Quote
                 </button>
               </a>
             </nav>
 
-            <!-- 모바일 메뉴 버튼 -->
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
@@ -47,7 +46,6 @@
           </div>
         </div>
 
-        <!-- 모바일 드롭다운 메뉴 -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
           <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
             <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
@@ -61,141 +59,185 @@
           </div>
         </div>
       </header>
-      <div class="@container">
-        <div class="@[480px]:p-0">
-          <!-- 메인 이미지 Hero -->
-          <div
-            class="flex min-h-[100svh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4"
-            style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), 
-                     url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNvYnUJ2CdR1SdYKertiTqRCipoQ8b4HFDvSSCi3PbTNwr81D3Rf1D80Zu0-KPJ4MLsY5eSS_iB36Aayv_TNFWZxmXYBxQvVsdD6RMZgIfOgngtKY0Fduwx1D_htbft3y2V0V-QJRwWB8ccvWwTIuKOI0_ErfFc4G_UTWqpYWVx6jIjqorrbeZL5DyoQw5eesfyMoXoKpmadc16zwdHBQMkDZcH5pCngDX38jXfL2gWcsuuPkN5ovBnUiwg885JCkWhKGXtAUYww");'>
-            <div class="flex flex-col gap-2 text-center">
-              <h1
-                class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl sm:tracking-[-0.033em]">
-                About Our Solutions
+
+      <div class="@container pt-14"> <div class="@[480px]:p-0">
+          
+          <div class="flex min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative"
+            style='background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop");'> <div class="flex flex-col gap-4 text-center max-w-4xl z-10">
+              <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl md:text-6xl">
+                Engineering a <br> Circular Economy
               </h1>
-              <h2 class="text-white text-sm sm:text-base font-normal leading-normal">
-                Revolutionizing coffee cup recycling with innovative technology.
+              <h2 class="text-white/90 text-lg sm:text-xl font-medium leading-normal max-w-2xl mx-auto">
+                We merge advanced robotics and Edge AI to redefine how the world processes waste.
               </h2>
             </div>
           </div>
+
         </div>
       </div>
+
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <section class="py-16 sm:py-20">
+        <section class="py-16 sm:py-24">
           <div class="mx-auto max-w-3xl text-center">
-            <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Our Story</h2>
-            <p class="mt-4 text-[#111518] text-base leading-relaxed">
-              Coffeebara Solutions was founded in 2024 with a mission to address the global challenge of coffee cup
-              waste. Our journey began with a simple idea: to create a device that automatically recycles plastic coffee
-              cups, making it easier for businesses and individuals to contribute to a more sustainable future. We've
-              grown from a small startup to a leading innovator in recycling technology, driven by our commitment to
-              environmental responsibility and technological advancement. <br> <br>
-              
-              - 2025 Konkuk Univ. Campustown Resident Startup (Seoul Metropolitan Goverment-Supported) <br>
-              - 2025 Filed Patent (Separation and Collection Apparatus for Disposable Cups) <br>
-              - 2024 Minister of Industustry, Trand and Energy Award (22nd Embedded SW Competition) <br>
-              - 2024 President's Award of Konkuk University (Creative Engineering Design Contest) <br>
+            <h2 class="text-[#111518] text-3xl font-bold tracking-tight sm:text-4xl">From Idea to Innovation</h2>
+            <p class="mt-6 text-[#111518] text-lg leading-relaxed text-gray-600">
+              Coffeebara was founded in 2025 by a team of engineers passionate about solving the plastic crisis through technology. We realized that manual separation is the bottleneck of recycling.
+              <br><br>
+              Our mission is to automate this process using <strong>Robotics and Artificial Intelligence</strong>. We have grown from a university lab project into a resident startup at Konkuk University Campustown, developing the proprietary 'NOCO' system that utilizes computer vision to separate cups, lids, and liquids autonomously.
             </p>
+            
+            <div class="mt-10 bg-gray-50 rounded-2xl p-8 border border-gray-100 text-left">
+              <h3 class="text-lg font-bold text-[#1993e5] mb-4">Key Milestones</h3>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="font-bold text-gray-900 min-w-[50px]">2026</span>
+                  <span class="text-gray-600">Selected Exhibitor for <strong>CES 2026</strong> (Seoul Pavilion)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="font-bold text-gray-900 min-w-[50px]">2025</span>
+                  <span class="text-gray-600">Filed Patent: <em>AI-based Separation and Collection Apparatus</em></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="font-bold text-gray-900 min-w-[50px]">2025</span>
+                  <span class="text-gray-600">Resident Startup at Konkuk Univ. Campustown</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="font-bold text-gray-900 min-w-[50px]">2024</span>
+                  <span class="text-gray-600"><strong>Grand Prize (Minister's Award)</strong> at the 22nd Embedded SW Competition</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        <section class="py-16 sm:py-20 border-t">
-          <div class="mx-auto max-w-5xl text-center">
-            <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Meet the Team</h2>
-            <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
-              <div class="flex flex-col gap-3 text-center items-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <img src="images/kim.jpeg" alt="KyungWoo Kim" class="w-full h-full object-cover" />
+        <section class="py-16 border-t border-gray-100">
+          <div class="mx-auto max-w-5xl">
+            <div class="text-center mb-12">
+              <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Core Competencies</h2>
+              <p class="mt-4 text-gray-600">We bridge the gap between environmental needs and engineering possibilities.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
                 </div>
-                <div>
-                  <p class="text-[#111518] text-base font-medium leading-normal">KyungWoo Kim</p>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">Product Manager</p>
-                </div>
+                <h3 class="text-xl font-bold mb-2">Edge AI Vision</h3>
+                <p class="text-gray-600 text-sm">Real-time object detection and classification running directly on the device for minimal latency and maximum privacy.</p>
               </div>
-              <div class="flex flex-col gap-3 text-center items-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <img src="images/park.jpeg" alt="HyeonJun Park" class="w-full h-full object-cover" />
+
+              <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+                  </svg>
                 </div>
-                <div>
-                  <p class="text-[#111518] text-base font-medium leading-normal">HyeonJun Park</p>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">HW & AI Engineer</p>
-                </div>
+                <h3 class="text-xl font-bold mb-2">Soft Robotics</h3>
+                <p class="text-gray-600 text-sm">Adaptive mechanism design that can handle diverse cup shapes, separate lids, and ensure 99% stacking efficiency.</p>
               </div>
-              <div class="flex flex-col gap-3 text-center items-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <img src="images/jang.jpeg" alt="SiYoung Jang" class="w-full h-full object-cover" />
+
+              <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4 text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12h1.5m1.5 0v-1.5m0 6.375h1.5m1.5 0v-1.5m0 6.375H12m0 0h1.5m1.5 0v-1.5m0 6.375h1.5M4.5 15.75H3m15.75 6H15.75m-1.5-1.5h-1.5m-6 0H6.375m.375 0-3-3m0 0-.375.375m.375-.375h1.5m1.5 0v-1.5m.75-5.25 1.5 1.5m0 0 1.5-1.5m-1.5 1.5v1.5m0-1.5h-1.5m1.5-1.5-1.5-1.5M12.75 3v1.5M16.5 8.25H18M16.5 12h1.5m-1.5 0v-1.5m0 6.375h1.5" />
+                  </svg>
                 </div>
-                <div>
-                  <p class="text-[#111518] text-base font-medium leading-normal">SiYoung Jang</p>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">Embedded SW Engineer</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 text-center items-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <img src="images/kwon.jpeg" alt="MinHyeok Kwon" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-[#111518] text-base font-medium leading-normal">MinHyeok Kwon</p>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">Web/App SW Engineer</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 text-center items-center">
-                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center">
-                  <img src="images/ann.jpeg" alt="JiMin Ahn" class="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p class="text-[#111518] text-base font-medium leading-normal">JiMin Ahn</p>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">Associate PM</p>
-                </div>
+                <h3 class="text-xl font-bold mb-2">Smart IoT</h3>
+                <p class="text-gray-600 text-sm">Real-time data collection on fill levels and machine status, enabling optimized route planning for waste collection.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="py-16 sm:py-20 border-t">
+        <section class="py-16 sm:py-20 border-t border-gray-100">
+          <div class="mx-auto max-w-5xl text-center">
+            <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Meet the Team</h2>
+            <p class="mt-4 text-gray-600 mb-12">Engineers and visionaries building the future of recycling.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
+              <div class="flex flex-col gap-3 text-center items-center group">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-[#1993e5] transition-all">
+                  <img src="images/kim.jpeg" alt="KyungWoo Kim" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-[#111518] text-base font-bold leading-normal">KyungWoo Kim</p>
+                  <p class="text-[#617989] text-sm font-medium leading-normal">CEO</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center items-center group">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-[#1993e5] transition-all">
+                  <img src="images/park.jpeg" alt="HyeonJun Park" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-[#111518] text-base font-bold leading-normal">HyeonJun Park</p>
+                  <p class="text-[#617989] text-sm font-medium leading-normal">CTO</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center items-center group">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-[#1993e5] transition-all">
+                  <img src="images/kwon.jpeg" alt="MinHyeok Kwon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-[#111518] text-base font-bold leading-normal">MinHyeok Kwon</p>
+                  <p class="text-[#617989] text-sm font-medium leading-normal">Web/App SW Engineer</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 text-center items-center group">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-[#1993e5] transition-all">
+                  <img src="images/ann.jpeg" alt="JiMin Ahn" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p class="text-[#111518] text-base font-bold leading-normal">JiMin Ahn</p>
+                  <p class="text-[#617989] text-sm font-medium leading-normal">Product Manager</p>
+                </div>
+              </div>
+               </div>
+          </div>
+        </section>
+
+        <section class="py-16 sm:py-20 border-t border-gray-100">
           <div class="mx-auto max-w-5xl text-center">
             <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Our Values</h2>
-            <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-              <div class="flex flex-col gap-3 rounded-lg border border-[#dbe1e6] bg-white p-6">
-                <div class="text-[#111518]"><svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px"
-                    fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z">
-                    </path>
-                  </svg></div>
+            <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+              
+              <div class="flex flex-col gap-3 rounded-xl border border-[#dbe1e6] bg-white p-6 shadow-sm">
+                <div class="text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M223.45,40.07a8,8,0,0,0-7.52-7.52C139.8,28.08,78.82,51,52.82,94a87.09,87.09,0,0,0-12.76,49c.57,15.92,5.21,32,13.79,47.85l-19.51,19.5a8,8,0,0,0,11.32,11.32l19.5-19.51C81,210.73,97.09,215.37,113,215.94q1.67.06,3.33.06A86.93,86.93,0,0,0,162,203.18C205,177.18,227.93,116.21,223.45,40.07ZM153.75,189.5c-22.75,13.78-49.68,14-76.71.77l88.63-88.62a8,8,0,0,0-11.32-11.32L65.73,179c-13.19-27-13-54,.77-76.71,22.09-36.47,74.6-56.44,141.31-54.06C210.2,114.89,190.22,167.41,153.75,189.5Z"></path>
+                  </svg>
+                </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-base font-bold leading-tight">Sustainability</h3>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">We are dedicated to minimizing
-                    environmental impact through our products and practices.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Sustainability</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal">We utilize technology to create a tangible impact on the environment.</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 rounded-lg border border-[#dbe1e6] bg-white p-6">
-                <div class="text-[#111518]"><svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px"
-                    fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z">
-                    </path>
-                  </svg></div>
+
+              <div class="flex flex-col gap-3 rounded-xl border border-[#dbe1e6] bg-white p-6 shadow-sm">
+                <div class="text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-76.48,59.38-92.83a8,8,0,0,1,6.62,14.56C58.15,62.83,40,93.42,40,128a88,88,0,0,0,176,0c0-34.58-18.15-65.17-50-78.27a8,8,0,1,1,6.62-14.56C208.19,51.52,232,87,232,128Zm-56-16a32,32,0,1,0,32,32A32,32,0,0,0,176,112Zm-96,0a32,32,0,1,0,32,32A32,32,0,0,0,80,112Z"></path> </svg>
+                </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-base font-bold leading-tight">Innovation</h3>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">We constantly seek new and improved ways
-                    to solve recycling challenges.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Precision Engineering</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal">We pursue high reliability through robust hardware and optimized software.</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-3 rounded-lg border border-[#dbe1e6] bg-white p-6">
-                <div class="text-[#111518]"><svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px"
-                    fill="currentColor" viewBox="0 0 256 256">
-                    <path
-                      d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z">
-                    </path>
-                  </svg></div>
+
+              <div class="flex flex-col gap-3 rounded-xl border border-[#dbe1e6] bg-white p-6 shadow-sm">
+                <div class="text-[#1993e5]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" fill="currentColor" viewBox="0 0 256 256">
+                     <path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path>
+                  </svg>
+                </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-base font-bold leading-tight">Community</h3>
-                  <p class="text-[#617989] text-sm font-normal leading-normal">We believe in working together with our
-                    customers and partners to create a positive change.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Customer Focus</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal">We solve real-world problems with user-centric design and feedback.</p>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -212,11 +254,10 @@
     </div>
   </div>
 
-  <script> // 모바일 메뉴 토글 \
+  <script> // 모바일 메뉴 토글
     document.getElementById('mobile-menu-btn').addEventListener('click', function () {
       const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden');
     }); 
   </script>
 </body>
-
 </html>

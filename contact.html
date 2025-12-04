@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
   <link rel="icon" href="images/coffeebara_with_background.png" type="image/png">
 
-  <title>Coffeebara</title>
-  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <title>Contact - Coffeebara</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <style>
-    /* Added for the font */
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
-    style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
-      <header class="fixed top-0 left-0 right-0 z-30 border-b border-[#f0f3f4]/80 bg-white/70 backdrop-blur-md">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-10">
+<body class="bg-white text-slate-900" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+  <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    
+    <header class="fixed top-0 left-0 right-0 z-30 border-b border-[#f0f3f4]/80 bg-white/70 backdrop-blur-md">
+        <div class="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-10">
           <div class="flex h-14 items-center justify-between">
             <a href="index.html" class="flex items-center gap-2 sm:gap-3 text-[#111518]">
-              <img src="images/coffeebara_with_background.png" alt="커피바라 메인 이미지" class="h-7 w-7 object-contain" />
+              <img src="images/coffeebara_with_background.png" alt="Coffeebara Logo" class="h-7 w-7 object-contain" />
               <h1 class="text-lg sm:text-xl md:text-2xl font-bold tracking-[-0.015em]">Coffeebara</h1>
             </a>
 
             <nav class="hidden md:flex items-center gap-8">
               <div class="flex items-center gap-8">
-                <a class="text-[#111518] text-sm font-medium" href="about.html">About</a>
-                <a class="text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-                <a class="text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="about.html">About</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="technology.html">Technology</a>
+                <a class="text-[#1993e5] text-sm font-bold" href="contact.html">Contact</a>
               </div>
               <a href="contact.html">
-                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em]">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors">
                   Request a Quote
                 </button>
               </a>
@@ -42,18 +37,17 @@
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                </path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
           </div>
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
-          <div class="mx-auto max-w-7xl px-4 py-4 space-y-4">
+          <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
             <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
             <a class="block text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-            <a class="block text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+            <a class="block text-[#1993e5] text-sm font-bold" href="contact.html">Contact</a>
             <a href="contact.html" class="block">
               <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
                 Request a Quote
@@ -61,105 +55,139 @@
             </a>
           </div>
         </div>
-      </header>
+    </header>
 
-      <main class="flex flex-1 justify-center py-5 pt-24 sm:pt-28">
-        <div class="w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="max-w-3xl mx-auto">
-
-            <div class="flex flex-col">
-              <div class="mb-8">
-                <h1 class="text-[#121516] tracking-light text-3xl sm:text-4xl font-bold leading-tight">Contact Us</h1>
-                <p class="mt-3 text-[#6a7881] text-base font-normal leading-normal">
-                  We're here to help! Reach out to us with any questions or inquiries. Our team is dedicated to
-                  providing prompt and helpful assistance.
-                </p>
-              </div>
-
-              <form action="https://formspree.io/f/xkgbyvbb" method="POST" class="flex flex-col gap-4">
-                <label class="flex flex-col">
-                  <span class="mb-2 text-sm font-medium text-[#121516]">Your Name</span>
-                  <input name="name" placeholder="Enter your name"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121516] focus:outline-0 focus:ring-2 focus:ring-[#1993e5] border-none bg-[#f1f3f4] h-14 placeholder:text-[#6a7881] p-4 text-base font-normal leading-normal" />
-                </label>
-                <label class="flex flex-col">
-                  <span class="mb-2 text-sm font-medium text-[#121516]">Your Email</span>
-                  <input name="email" type="email" placeholder="Enter your email"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121516] focus:outline-0 focus:ring-2 focus:ring-[#1993e5] border-none bg-[#f1f3f4] h-14 placeholder:text-[#6a7881] p-4 text-base font-normal leading-normal" />
-                </label>
-                <label class="flex flex-col">
-                  <span class="mb-2 text-sm font-medium text-[#121516]">Your Company</span>
-                  <input name="company" placeholder="Enter your company name"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121516] focus:outline-0 focus:ring-2 focus:ring-[#1993e5] border-none bg-[#f1f3f4] h-14 placeholder:text-[#6a7881] p-4 text-base font-normal leading-normal" />
-                </label>
-                <label class="flex flex-col">
-                  <span class="mb-2 text-sm font-medium text-[#121516]">Your Message</span>
-                  <textarea name="message" placeholder="How can we help you?"
-                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#121516] focus:outline-0 focus:ring-2 focus:ring-[#1993e5] border-none bg-[#f1f3f4] min-h-36 placeholder:text-[#6a7881] p-4 text-base font-normal leading-normal"></textarea>
-                </label>
+    <main class="flex-1 pt-24 pb-12 sm:pt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                
                 <div>
-                  <button type="submit"
-                    class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[#1993e5] text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-sky-600 transition-colors">
-                    <span class="truncate">Submit</span>
-                  </button>
+                    <h1 class="text-4xl sm:text-5xl font-bold text-[#111518] mb-6 tracking-tight leading-tight">
+                        Let’s Build the <br>
+                        <span class="text-[#1993e5]">Future of Automation</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                        Whether you are interested in deploying NOCO on your campus or integrating our modular robotics into your factory, we are here to help.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#1993e5] shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#111518]">Headquarters</h3>
+                                <p class="text-gray-600 text-sm mt-1">Room 303, Heavy Equipment Experiment Bldg,<br>120 Neungdong-ro, Gwangjin-gu, Seoul, Korea</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-[#1993e5] shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#111518]">Email Us</h3>
+                                <a href="mailto:casekim41@gmail.com" class="text-[#1993e5] hover:underline text-sm font-medium">casekim41@gmail.com</a>
+                                <p class="text-gray-500 text-xs mt-1">Response time: Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover hover:scale-105 transition-transform duration-700"
+                             style='background-image: url("images/map.png");'></div>
+                    </div>
                 </div>
-              </form>
+
+                <div class="bg-gray-50 rounded-3xl p-8 sm:p-10 border border-gray-100 shadow-sm">
+                    <form action="https://formspree.io/f/xkgbyvbb" method="POST" class="flex flex-col gap-6">
+                        
+                        <div class="flex flex-col gap-2">
+                            <label class="text-sm font-bold text-[#111518]">I'm interested in...</label>
+                            <div class="flex flex-wrap gap-3">
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="subject" value="Partnership" class="peer sr-only" checked>
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                        Partnership
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="subject" value="Product Quote" class="peer sr-only">
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                        Product Quote
+                                    </div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input type="radio" name="subject" value="Tech Inquiry" class="peer sr-only">
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                        Tech Inquiry
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <label class="flex flex-col gap-2">
+                                <span class="text-sm font-medium text-[#111518]">Your Name</span>
+                                <input name="name" required placeholder="John Doe" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                            </label>
+                            <label class="flex flex-col gap-2">
+                                <span class="text-sm font-medium text-[#111518]">Company Name</span>
+                                <input name="company" placeholder="Coffeebara Inc." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                            </label>
+                        </div>
+
+                        <label class="flex flex-col gap-2">
+                            <span class="text-sm font-medium text-[#111518]">Email Address</span>
+                            <input name="email" type="email" required placeholder="john@example.com" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                        </label>
+
+                        <label class="flex flex-col gap-2">
+                            <span class="text-sm font-medium text-[#111518]">Message</span>
+                            <textarea name="message" required placeholder="Tell us about your project or needs..." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 min-h-[120px] focus:border-[#1993e5] focus:ring-[#1993e5]"></textarea>
+                        </label>
+
+                        <button type="submit" class="w-full bg-[#1993e5] text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#157bbd] transition-all transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
             </div>
 
-            <div class="mt-16">
-              <div class="mb-8">
-                <h2 class="text-[#121516] text-3xl sm:text-4xl font-bold leading-tight tracking-[-0.015em]">Our Location
-                </h2>
-                <p class="mt-3 text-[#6a7881] text-base font-normal leading-normal">
-                  Visit us at our office or contact us via phone. We're always happy to discuss how Coffeebara Solutions
-                  can help your business.
-                </p>
-              </div>
-
-              <div class="space-y-5 border-t border-t-[#dde1e3] pt-5">
-                <div class="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-1">
-                  <p class="text-[#6a7881] text-sm font-medium">Address</p>
-                  <p class="text-[#121516] text-sm font-normal">Room 303 Heavy Equipment Experiment Building, 120,
-                    Neungdong-ro, Gwangjin-gu, Seoul, Republic of Korea</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-[80px_1fr] gap-1 border-t border-t-[#dde1e3] pt-5">
-                  <p class="text-[#6a7881] text-sm font-medium">Mail</p>
-                  <p class="text-[#121516] text-sm font-normal">casekim41@gmail.com</p>
-                </div>
-              </div>
-
-              <div class="mt-8">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl object-cover"
-                  style='background-image: url("images/map.png");'></div>
-              </div>
+            <div class="mt-20 bg-[#111518] rounded-2xl p-8 sm:p-12 text-center text-white relative overflow-hidden group cursor-pointer" onclick="window.open('https://www.ces.tech/', '_blank')">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 relative z-10">Going to CES 2026?</h2>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto relative z-10">Visit our booth at the <strong>Seoul Pavilion</strong> to see NOCO in action. Let's schedule a meeting in Las Vegas.</p>
+                <button class="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-[#111518] transition-all font-bold relative z-10">
+                    Book a Meeting at CES
+                </button>
             </div>
 
-          </div>
-
-          <footer class="flex justify-center mt-16">
-            <div class="flex w-full flex-1 flex-col">
-              <div class="flex flex-col gap-6 px-5 py-10 text-center border-t">
-                <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-                  <a class="text-[#617989] text-base font-normal leading-normal" href="#">Privacy Policy</a>
-                  <a class="text-[#617989] text-base font-normal leading-normal" href="#">Terms of Service</a>
-                </div>
-                <p class="text-[#617989] text-base font-normal leading-normal">@2024 Coffeebara Solutions. All rights
-                  reserved.</p>
-              </div>
-            </div>
-          </footer>
         </div>
-      </main>
-    </div>
+    </main>
+
+    <footer class="flex justify-center border-t border-[#f0f3f4] mt-12 bg-gray-50">
+        <div class="flex max-w-[960px] w-full flex-col">
+          <div class="flex flex-col gap-4 sm:gap-6 px-5 py-8 text-center">
+            <p class="text-[#637988] text-sm">© 2024 Coffeebara Solutions. All rights reserved.</p>
+          </div>
+        </div>
+    </footer>
+
   </div>
 
   <script>
-    // 모바일 메뉴 토글
     document.getElementById('mobile-menu-btn').addEventListener('click', function () {
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     });
   </script>
 </body>
-
 </html>
