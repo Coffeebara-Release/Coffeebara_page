@@ -8,6 +8,7 @@
   <title>Contact - Coffeebara</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="i18n.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
@@ -24,15 +25,16 @@
 
             <nav class="hidden md:flex items-center gap-8">
               <div class="flex items-center gap-8">
-                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="about.html">About</a>
-                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="technology.html">Technology</a>
-                <a class="text-[#1993e5] text-sm font-bold" href="contact.html">Contact</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="about.html" data-i18n="nav_about">About</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="technology.html" data-i18n="nav_technology">Technology</a>
+                <a class="text-[#1993e5] text-sm font-bold" href="contact.html" data-i18n="nav_contact">Contact</a>
               </div>
               <a href="contact.html">
-                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors" data-i18n="nav_quote">
                   Request a Quote
                 </button>
               </a>
+              <button id="language-toggle" class="h-10 px-3 rounded-lg border border-gray-300 text-[#111518] text-sm font-bold hover:bg-gray-50 transition-colors">한국어</button>
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
@@ -45,11 +47,11 @@
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
           <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
-            <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
-            <a class="block text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-            <a class="block text-[#1993e5] text-sm font-bold" href="contact.html">Contact</a>
+            <a class="block text-[#111518] text-sm font-medium" href="about.html" data-i18n="nav_about">About</a>
+            <a class="block text-[#111518] text-sm font-medium" href="technology.html" data-i18n="nav_technology">Technology</a>
+            <a class="block text-[#1993e5] text-sm font-bold" href="contact.html" data-i18n="nav_contact">Contact</a>
             <a href="contact.html" class="block">
-              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
+              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold" data-i18n="nav_quote">
                 Request a Quote
               </button>
             </a>
@@ -63,11 +65,11 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                 
                 <div>
-                    <h1 class="text-4xl sm:text-5xl font-bold text-[#111518] mb-6 tracking-tight leading-tight">
-                        Let’s Build the <br>
+                    <h1 class="text-4xl sm:text-5xl font-bold text-[#111518] mb-6 tracking-tight leading-tight" data-i18n="contact_hero_title">
+                        Let's Build the <br>
                         <span class="text-[#1993e5]">Future of Automation</span>
                     </h1>
-                    <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                    <p class="text-lg text-gray-600 mb-10 leading-relaxed" data-i18n="contact_hero_desc">
                         Whether you are interested in deploying NOCO on your campus or integrating our modular robotics into your factory, we are here to help.
                     </p>
 
@@ -80,8 +82,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-[#111518]">Headquarters</h3>
-                                <p class="text-gray-600 text-sm mt-1">Room 303, Heavy Equipment Experiment Bldg,<br>120 Neungdong-ro, Gwangjin-gu, Seoul, Korea</p>
+                                <h3 class="font-bold text-[#111518]" data-i18n="contact_hq">Headquarters</h3>
+                                <p class="text-gray-600 text-sm mt-1" data-i18n="contact_hq_addr">Room 303, Heavy Equipment Experiment Bldg,<br>120 Neungdong-ro, Gwangjin-gu, Seoul, Korea</p>
                             </div>
                         </div>
 
@@ -92,9 +94,9 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-[#111518]">Email Us</h3>
+                                <h3 class="font-bold text-[#111518]" data-i18n="contact_email">Email Us</h3>
                                 <a href="mailto:casekim41@gmail.com" class="text-[#1993e5] hover:underline text-sm font-medium">casekim41@gmail.com</a>
-                                <p class="text-gray-500 text-xs mt-1">Response time: Within 24 hours</p>
+                                <p class="text-gray-500 text-xs mt-1" data-i18n="contact_response">Response time: Within 24 hours</p>
                             </div>
                         </div>
                     </div>
@@ -109,23 +111,23 @@
                     <form action="https://formspree.io/f/xkgbyvbb" method="POST" class="flex flex-col gap-6">
                         
                         <div class="flex flex-col gap-2">
-                            <label class="text-sm font-bold text-[#111518]">I'm interested in...</label>
+                            <label class="text-sm font-bold text-[#111518]" data-i18n="contact_form_interested">I'm interested in...</label>
                             <div class="flex flex-wrap gap-3">
                                 <label class="cursor-pointer">
                                     <input type="radio" name="subject" value="Partnership" class="peer sr-only" checked>
-                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all" data-i18n="contact_form_partnership">
                                         Partnership
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
                                     <input type="radio" name="subject" value="Product Quote" class="peer sr-only">
-                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all" data-i18n="contact_form_product">
                                         Product Quote
                                     </div>
                                 </label>
                                 <label class="cursor-pointer">
                                     <input type="radio" name="subject" value="Tech Inquiry" class="peer sr-only">
-                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all">
+                                    <div class="px-4 py-2 rounded-full border border-gray-300 bg-white text-sm text-gray-600 peer-checked:bg-[#1993e5] peer-checked:text-white peer-checked:border-[#1993e5] transition-all" data-i18n="contact_form_tech">
                                         Tech Inquiry
                                     </div>
                                 </label>
@@ -134,26 +136,26 @@
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <label class="flex flex-col gap-2">
-                                <span class="text-sm font-medium text-[#111518]">Your Name</span>
-                                <input name="name" required placeholder="John Doe" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                                <span class="text-sm font-medium text-[#111518]" data-i18n="contact_form_name">Your Name</span>
+                                <input name="name" required data-i18n-placeholder="contact_form_name_placeholder" placeholder="John Doe" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
                             </label>
                             <label class="flex flex-col gap-2">
-                                <span class="text-sm font-medium text-[#111518]">Company Name</span>
-                                <input name="company" placeholder="Coffeebara Inc." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                                <span class="text-sm font-medium text-[#111518]" data-i18n="contact_form_company">Company Name</span>
+                                <input name="company" data-i18n-placeholder="contact_form_company_placeholder" placeholder="Coffeebara Inc." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
                             </label>
                         </div>
 
                         <label class="flex flex-col gap-2">
-                            <span class="text-sm font-medium text-[#111518]">Email Address</span>
-                            <input name="email" type="email" required placeholder="john@example.com" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
+                            <span class="text-sm font-medium text-[#111518]" data-i18n="contact_form_email">Email Address</span>
+                            <input name="email" type="email" required data-i18n-placeholder="contact_form_email_placeholder" placeholder="john@example.com" class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 focus:border-[#1993e5] focus:ring-[#1993e5]">
                         </label>
 
                         <label class="flex flex-col gap-2">
-                            <span class="text-sm font-medium text-[#111518]">Message</span>
-                            <textarea name="message" required placeholder="Tell us about your project or needs..." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 min-h-[120px] focus:border-[#1993e5] focus:ring-[#1993e5]"></textarea>
+                            <span class="text-sm font-medium text-[#111518]" data-i18n="contact_form_message">Message</span>
+                            <textarea name="message" required data-i18n-placeholder="contact_form_message_placeholder" placeholder="Tell us about your project or needs..." class="form-input rounded-xl border-gray-200 bg-white px-4 py-3 min-h-[120px] focus:border-[#1993e5] focus:ring-[#1993e5]"></textarea>
                         </label>
 
-                        <button type="submit" class="w-full bg-[#1993e5] text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#157bbd] transition-all transform hover:-translate-y-1">
+                        <button type="submit" class="w-full bg-[#1993e5] text-white font-bold py-4 rounded-xl shadow-lg hover:bg-[#157bbd] transition-all transform hover:-translate-y-1" data-i18n="contact_form_submit">
                             Send Message
                         </button>
                     </form>
@@ -161,11 +163,11 @@
 
             </div>
 
-            <div class="mt-20 bg-[#111518] rounded-2xl p-8 sm:p-12 text-center text-white relative overflow-hidden group cursor-pointer" onclick="window.open('https://www.ces.tech/', '_blank')">
+            <div class="mt-20 bg-[#111518] rounded-2xl p-8 sm:p-12 text-center text-white relative overflow-hidden group cursor-pointer" onclick="window.open('https://exhibitors.ces.tech/8_0/exhibitor/exhibitor-details.cfm?exhid=001Pp00001aRvwJIAS', '_blank')">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <h2 class="text-2xl sm:text-3xl font-bold mb-4 relative z-10">Going to CES 2026?</h2>
-                <p class="text-gray-400 mb-8 max-w-xl mx-auto relative z-10">Visit our booth at the <strong>Seoul Pavilion</strong> to see NOCO in action. Let's schedule a meeting in Las Vegas.</p>
-                <button class="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-[#111518] transition-all font-bold relative z-10">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4 relative z-10" data-i18n="contact_ces_title">Going to CES 2026?</h2>
+                <p class="text-gray-400 mb-8 max-w-xl mx-auto relative z-10" data-i18n="contact_ces_desc">Visit our booth at the Seoul Pavilion to see NOCO in action. Let's schedule a meeting in Las Vegas.</p>
+                <button class="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-[#111518] transition-all font-bold relative z-10" data-i18n="contact_ces_button">
                     Book a Meeting at CES
                 </button>
             </div>
@@ -188,6 +190,14 @@
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     });
+
+    // 언어 전환 기능
+    const langToggle = document.getElementById('language-toggle');
+    if (langToggle) {
+      langToggle.addEventListener('click', () => {
+        setLanguage(currentLanguage === 'en' ? 'ko' : 'en');
+      });
+    }
   </script>
 </body>
 </html>

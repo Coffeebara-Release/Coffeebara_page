@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -26,15 +28,16 @@
 
             <nav class="hidden md:flex items-center gap-8">
               <div class="flex items-center gap-8">
-                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="about.html">About</a>
-                <a class="text-[#1993e5] text-sm font-bold" href="technology.html">Technology</a>
-                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="contact.html">Contact</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="about.html" data-i18n="nav_about">About</a>
+                <a class="text-[#1993e5] text-sm font-bold" href="technology.html" data-i18n="nav_technology">Technology</a>
+                <a class="text-[#111518] text-sm font-medium hover:text-[#1993e5] transition-colors" href="contact.html" data-i18n="nav_contact">Contact</a>
               </div>
               <a href="contact.html">
-                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors" data-i18n="nav_quote">
                   Request a Quote
                 </button>
               </a>
+              <button id="language-toggle" class="h-10 px-3 rounded-lg border border-gray-300 text-[#111518] text-sm font-bold hover:bg-gray-50 transition-colors">한국어</button>
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
@@ -47,11 +50,11 @@
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
           <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
-            <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
-            <a class="block text-[#1993e5] text-sm font-bold" href="technology.html">Technology</a>
-            <a class="block text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+            <a class="block text-[#111518] text-sm font-medium" href="about.html" data-i18n="nav_about">About</a>
+            <a class="block text-[#1993e5] text-sm font-bold" href="technology.html" data-i18n="nav_technology">Technology</a>
+            <a class="block text-[#111518] text-sm font-medium" href="contact.html" data-i18n="nav_contact">Contact</a>
             <a href="contact.html" class="block">
-              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
+              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold" data-i18n="nav_quote">
                 Request a Quote
               </button>
             </a>
@@ -66,11 +69,11 @@
                style="background-image: radial-gradient(#1993e5 1px, transparent 1px); background-size: 32px 32px;"></div>
           
           <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight mb-6" data-i18n="tech_hero_title">
               Advanced Robotics <br>
               <span class="text-[#1993e5]">Powered by Edge AI</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg sm:text-xl font-light leading-relaxed">
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg sm:text-xl font-light leading-relaxed" data-i18n="tech_hero_desc">
               We don't just build bins. We engineer <strong>autonomous sorting modules</strong> capable of handling unstructured objects in chaotic environments.
             </p>
           </div>
@@ -79,8 +82,8 @@
         <div class="bg-gray-50 py-16 sm:py-24">
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-              <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Core Technologies</h2>
-              <p class="mt-4 text-gray-600">Our proprietary stack enables precision automation beyond simple recycling.</p>
+              <h2 class="text-[#111518] text-3xl font-bold tracking-tight" data-i18n="tech_core_title">Core Technologies</h2>
+              <p class="mt-4 text-gray-600" data-i18n="tech_core_desc">Our proprietary stack enables precision automation beyond simple recycling.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -90,13 +93,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-[#111518] mb-3">Lightweight Edge AI</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-bold text-[#111518] mb-3" data-i18n="tech_ai_title">Lightweight Edge AI</h3>
+                <p class="text-gray-600 leading-relaxed" data-i18n="tech_ai_desc">
                   Our YOLO-based vision model runs on embedded systems with <strong>&lt;1s latency</strong>. It operates without cloud dependency, ensuring privacy and real-time processing even in unstable network environments.
                 </p>
                 <div class="mt-4 flex gap-2 flex-wrap">
-                   <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600">YOLOv8</span>
-                   <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600">Edge AI</span>
+                   <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600" data-i18n="tech_ai_tag1">YOLOv8</span>
+                   <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600" data-i18n="tech_ai_tag2">Edge AI</span>
                 </div>
               </div>
 
@@ -106,13 +109,13 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-[#111518] mb-3">Adaptive Gripper</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-bold text-[#111518] mb-3" data-i18n="tech_gripper_title">Adaptive Gripper</h3>
+                <p class="text-gray-600 leading-relaxed" data-i18n="tech_gripper_desc">
                   Designed for <strong>unstructured objects</strong>. Our soft-robotics inspired mechanism can securely handle crushed cups, slippery surfaces, and various materials (PET, PP, Paper) with precise force control.
                 </p>
                 <div class="mt-4 flex gap-2 flex-wrap">
-                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600">Robotics</span>
-                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600">Embodied AI</span>
+                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600" data-i18n="tech_gripper_tag1">Robotics</span>
+                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600" data-i18n="tech_gripper_tag2">Embodied AI</span>
                </div>
               </div>
 
@@ -122,12 +125,12 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold text-[#111518] mb-3">Modular Architecture</h3>
-                <p class="text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-bold text-[#111518] mb-3" data-i18n="tech_modular_title">Modular Architecture</h3>
+                <p class="text-gray-600 leading-relaxed" data-i18n="tech_modular_desc">
                   Built for scalability. Each module (Vision, Separation, Cleaning) operates independently via <strong>Object-Oriented HW/SW</strong>, allowing for easy maintenance and customization for industrial factory lines.
                 </p>
                 <div class="mt-4 flex gap-2 flex-wrap">
-                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600">Modular</span>
+                  <span class="px-2 py-1 bg-gray-100 text-xs font-medium rounded text-gray-600" data-i18n="tech_modular_tag">Modular</span>
                </div>
               </div>
             </div>
@@ -137,9 +140,9 @@
         <div class="py-16 sm:py-24 bg-white">
           <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-              <span class="text-[#1993e5] font-bold tracking-wider text-sm uppercase">Application</span>
-              <h2 class="text-[#111518] text-3xl font-bold tracking-tight mt-2">The 'NOCO' Process</h2>
-              <p class="mt-4 text-gray-600">How we apply our core tech to solve the disposable cup crisis.</p>
+              <span class="text-[#1993e5] font-bold tracking-wider text-sm uppercase" data-i18n="tech_noco_title">Application</span>
+              <h2 class="text-[#111518] text-3xl font-bold tracking-tight mt-2" data-i18n="tech_noco_title">The 'NOCO' Process</h2>
+              <p class="mt-4 text-gray-600" data-i18n="tech_noco_desc">How we apply our core tech to solve the disposable cup crisis.</p>
             </div>
 
             <div class="flex flex-col md:flex-row items-center gap-10 mb-20">
@@ -151,19 +154,19 @@
               <div class="w-full md:w-1/2">
                 <div class="flex items-center gap-4 mb-4">
                   <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1993e5] text-white font-bold">1</span>
-                  <h3 class="text-2xl font-bold text-[#111518]">Recognition</h3>
+                  <h3 class="text-2xl font-bold text-[#111518]" data-i18n="tech_step1_title">Recognition</h3>
                 </div>
-                <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                  Users simply "Drop" the cup. Our Edge AI analyzes the object in real-time, identifying material type, size, and presence of lids or straws.
+                <p class="text-gray-600 text-lg leading-relaxed mb-4" data-i18n="tech_step1_desc">
+                  Our computer vision system instantly detects and classifies incoming cups and materials, even when crushed or misaligned.
                 </p>
                 <ul class="space-y-2">
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    99.9% Detection Accuracy
+                    <span data-i18n="tech_step1_feat1">Real-time Detection</span>
                   </li>
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Multi-object Classification
+                    <span data-i18n="tech_step1_feat2">Multi-object Classification</span>
                   </li>
                 </ul>
               </div>
@@ -178,19 +181,19 @@
               <div class="w-full md:w-1/2">
                 <div class="flex items-center gap-4 mb-4">
                   <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1993e5] text-white font-bold">2</span>
-                  <h3 class="text-2xl font-bold text-[#111518]">Separation</h3>
+                  <h3 class="text-2xl font-bold text-[#111518]" data-i18n="tech_step2_title">Separation</h3>
                 </div>
-                <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                  The robotic arm, equipped with our adaptive gripper, deftly separates lids and holders from the cup body. Parallel processing ensures high throughput.
+                <p class="text-gray-600 text-lg leading-relaxed mb-4" data-i18n="tech_step2_desc">
+                  The adaptive gripper securely grasps and transfers objects to separation stations based on material properties and contaminant levels.
                 </p>
                 <ul class="space-y-2">
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Non-destructive handling
+                    <span data-i18n="tech_step2_feat1">Non-destructive handling</span>
                   </li>
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Handles 5+ cup sizes
+                    <span data-i18n="tech_step2_feat2">Handles 5+ cup sizes</span>
                   </li>
                 </ul>
               </div>
@@ -205,19 +208,19 @@
               <div class="w-full md:w-1/2">
                 <div class="flex items-center gap-4 mb-4">
                   <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1993e5] text-white font-bold">3</span>
-                  <h3 class="text-2xl font-bold text-[#111518]">Cleansing</h3>
+                  <h3 class="text-2xl font-bold text-[#111518]" data-i18n="tech_step3_title">Cleansing</h3>
                 </div>
-                <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                  High-pressure fluid jets remove residue and contaminants (sugar, milk) in seconds, significantly increasing the value of the recycled PET material.
+                <p class="text-gray-600 text-lg leading-relaxed mb-4" data-i18n="tech_step3_desc">
+                  Contamination detection and removal processes ensure only clean, grade-A material moves to the next stage.
                 </p>
                 <ul class="space-y-2">
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Minimal Water Usage
+                    <span data-i18n="tech_step3_feat1">Minimal Water Usage</span>
                   </li>
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    High-speed Drying
+                    <span data-i18n="tech_step3_feat2">High-speed Drying</span>
                   </li>
                 </ul>
               </div>
@@ -232,19 +235,19 @@
               <div class="w-full md:w-1/2">
                 <div class="flex items-center gap-4 mb-4">
                   <span class="flex items-center justify-center w-8 h-8 rounded-full bg-[#1993e5] text-white font-bold">4</span>
-                  <h3 class="text-2xl font-bold text-[#111518]">Loading</h3>
+                  <h3 class="text-2xl font-bold text-[#111518]" data-i18n="tech_step4_title">Loading</h3>
                 </div>
-                <p class="text-gray-600 text-lg leading-relaxed mb-4">
-                  Cleaned cups are stacked vertically to maximize storage efficiency. Our smart stacking algorithm reduces volume by up to 90% compared to traditional bins.
+                <p class="text-gray-600 text-lg leading-relaxed mb-4" data-i18n="tech_step4_desc">
+                  Clean material is automatically baled or loaded for shipment to recycling facilities, maximizing throughput and minimizing waste.
                 </p>
                 <ul class="space-y-2">
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    10x Volume Reduction
+                    <span data-i18n="tech_step4_feat1">Volume Reduction</span>
                   </li>
                   <li class="flex items-center text-sm text-gray-500">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    IoT Full-Level Alerts
+                    <span data-i18n="tech_step4_feat2">IoT Alerts</span>
                   </li>
                 </ul>
               </div>
@@ -255,38 +258,38 @@
 
         <div class="bg-[#111518] text-white py-16">
           <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-bold mb-8 border-b border-gray-700 pb-4">Technical Specifications</h2>
+            <h2 class="text-2xl font-bold mb-8 border-b border-gray-700 pb-4" data-i18n="tech_specs_title">Technical Specifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-sm">
               
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Processing Speed</span>
-                <span class="font-medium">5 seconds / cup</span>
+                <span class="text-gray-400" data-i18n="tech_spec_processing_speed">Processing Speed</span>
+                <span class="font-medium">12 cups/min</span>
               </div>
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Vision System</span>
-                <span class="font-medium">Edge AI (on Low-Cost HW)</span>
+                <span class="text-gray-400" data-i18n="tech_spec_vision">Vision System</span>
+                <span class="font-medium">Edge AI (YOLOv8)</span>
               </div>
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Recognition Accuracy</span>
-                <span class="font-medium">> 99.5%</span>
+                <span class="text-gray-400" data-i18n="tech_spec_accuracy">Recognition Accuracy</span>
+                <span class="font-medium">&gt; 95%</span>
               </div>
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Connectivity</span>
-                <span class="font-medium">Wi-Fi / Ethernet</span>
+                <span class="text-gray-400" data-i18n="tech_spec_connectivity">Connectivity</span>
+                <span class="font-medium">Ethernet, Wifi</span>
               </div>
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Power Consumption</span>
-                <span class="font-medium">Low-power mode supported</span>
+                <span class="text-gray-400" data-i18n="tech_spec_power">Power Consumption</span>
+                <span class="font-medium">~200W</span>
               </div>
               <div class="flex justify-between border-b border-gray-800 pb-2">
-                <span class="text-gray-400">Software Stack</span>
-                <span class="font-medium">Python, C++</span>
+                <span class="text-gray-400" data-i18n="tech_spec_DOF">Uptime</span>
+                <span class="font-medium">28 (stepper & servo motor)</span>
               </div>
               
             </div>
             <div class="mt-10 text-center">
-              <p class="text-gray-400 mb-4">Need custom specs for your factory?</p>
-              <a href="contact.html" class="inline-block px-6 py-3 border border-[#1993e5] text-[#1993e5] rounded-lg font-bold hover:bg-[#1993e5] hover:text-white transition-all">
+              <p class="text-gray-400 mb-4" data-i18n="tech_custom_desc">Need custom specs for your factory?</p>
+              <a href="contact.html" class="inline-block px-6 py-3 border border-[#1993e5] text-[#1993e5] rounded-lg font-bold hover:bg-[#1993e5] hover:text-white transition-all" data-i18n="tech_custom_button">
                 Contact Engineering Team
               </a>
             </div>
@@ -314,6 +317,14 @@
       const menu = document.getElementById('mobile-menu');
       menu.classList.toggle('hidden');
     });
+
+    // 언어 전환 기능
+    const langToggle = document.getElementById('language-toggle');
+    if (langToggle) {
+      langToggle.addEventListener('click', () => {
+        setLanguage(currentLanguage === 'en' ? 'ko' : 'en');
+      });
+    }
   </script>
 </body>
 </html>

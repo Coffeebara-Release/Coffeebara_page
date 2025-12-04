@@ -9,6 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <script src="i18n.js"></script>
 </head>
 
 <body>
@@ -26,15 +28,16 @@
 
             <nav class="hidden md:flex items-center gap-8">
               <div class="flex items-center gap-8">
-                <a class="text-[#111518] text-sm font-medium" href="about.html">About</a>
-                <a class="text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-                <a class="text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+                <a class="text-[#111518] text-sm font-medium" href="about.html" data-i18n="nav_about">About</a>
+                <a class="text-[#111518] text-sm font-medium" href="technology.html" data-i18n="nav_technology">Technology</a>
+                <a class="text-[#111518] text-sm font-medium" href="contact.html" data-i18n="nav_contact">Contact</a>
               </div>
               <a href="contact.html">
-                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors">
+                <button class="h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold tracking-[0.015em] hover:bg-[#157bbd] transition-colors" data-i18n="nav_quote">
                   Request a Quote
                 </button>
               </a>
+              <button id="language-toggle" class="h-10 px-3 rounded-lg border border-gray-300 text-[#111518] text-sm font-bold hover:bg-gray-50 transition-colors">한국어</button>
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden p-2 text-[#111518]" aria-label="open menu">
@@ -48,11 +51,11 @@
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-[#f0f3f4] bg-white">
           <div class="mx-auto max-w-[1200px] px-4 py-4 space-y-4">
-            <a class="block text-[#111518] text-sm font-medium" href="about.html">About</a>
-            <a class="block text-[#111518] text-sm font-medium" href="technology.html">Technology</a>
-            <a class="block text-[#111518] text-sm font-medium" href="contact.html">Contact</a>
+            <a class="block text-[#111518] text-sm font-medium" href="about.html" data-i18n="nav_about">About</a>
+            <a class="block text-[#111518] text-sm font-medium" href="technology.html" data-i18n="nav_technology">Technology</a>
+            <a class="block text-[#111518] text-sm font-medium" href="contact.html" data-i18n="nav_contact">Contact</a>
             <a href="contact.html" class="block">
-              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold">
+              <button class="w-full h-10 px-4 rounded-lg bg-[#1993e5] text-white text-sm font-bold" data-i18n="nav_quote">
                 Request a Quote
               </button>
             </a>
@@ -64,10 +67,10 @@
           
           <div class="flex min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 relative"
             style='background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop");'> <div class="flex flex-col gap-4 text-center max-w-4xl z-10">
-              <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl md:text-6xl">
+              <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl md:text-6xl" data-i18n="about_hero_title">
                 Engineering a <br> Circular Economy
               </h1>
-              <h2 class="text-white/90 text-lg sm:text-xl font-medium leading-normal max-w-2xl mx-auto">
+              <h2 class="text-white/90 text-lg sm:text-xl font-medium leading-normal max-w-2xl mx-auto" data-i18n="about_hero_desc">
                 We merge advanced robotics and Edge AI to redefine how the world processes waste.
               </h2>
             </div>
@@ -80,31 +83,31 @@
 
         <section class="py-16 sm:py-24">
           <div class="mx-auto max-w-3xl text-center">
-            <h2 class="text-[#111518] text-3xl font-bold tracking-tight sm:text-4xl">From Idea to Innovation</h2>
-            <p class="mt-6 text-[#111518] text-lg leading-relaxed text-gray-600">
+            <h2 class="text-[#111518] text-3xl font-bold tracking-tight sm:text-4xl" data-i18n="about_idea_title">From Idea to Innovation</h2>
+            <p class="mt-6 text-[#111518] text-lg leading-relaxed text-gray-600" data-i18n="about_idea_desc">
               Coffeebara was founded in 2025 by a team of engineers passionate about solving the plastic crisis through technology. We realized that manual separation is the bottleneck of recycling.
               <br><br>
               Our mission is to automate this process using <strong>Robotics and Artificial Intelligence</strong>. We have grown from a university lab project into a resident startup at Konkuk University Campustown, developing the proprietary 'NOCO' system that utilizes computer vision to separate cups, lids, and liquids autonomously.
             </p>
             
             <div class="mt-10 bg-gray-50 rounded-2xl p-8 border border-gray-100 text-left">
-              <h3 class="text-lg font-bold text-[#1993e5] mb-4">Key Milestones</h3>
+              <h3 class="text-lg font-bold text-[#1993e5] mb-4" data-i18n="about_milestones">Key Milestones</h3>
               <ul class="space-y-3">
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-gray-900 min-w-[50px]">2026</span>
-                  <span class="text-gray-600">Selected Exhibitor for <strong>CES 2026</strong> (Seoul Pavilion)</span>
+                  <span class="text-gray-600" data-i18n="about_milestone_2026">Selected Exhibitor for <strong>CES 2026</strong> (Seoul Pavilion)</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-gray-900 min-w-[50px]">2025</span>
-                  <span class="text-gray-600">Filed Patent: <em>AI-based Separation and Collection Apparatus</em></span>
+                  <span class="text-gray-600" data-i18n="about_milestone_2025_1">Filed Patent: <em>AI-based Separation and Collection Apparatus</em></span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-gray-900 min-w-[50px]">2025</span>
-                  <span class="text-gray-600">Resident Startup at Konkuk Univ. Campustown</span>
+                  <span class="text-gray-600" data-i18n="about_milestone_2025_2">Resident Startup at Konkuk Univ. Campustown</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <span class="font-bold text-gray-900 min-w-[50px]">2024</span>
-                  <span class="text-gray-600"><strong>Grand Prize (Minister's Award)</strong> at the 22nd Embedded SW Competition</span>
+                  <span class="text-gray-600" data-i18n="about_milestone_2024"><strong>Grand Prize (Minister's Award)</strong> at the 22nd Embedded SW Competition</span>
                 </li>
               </ul>
             </div>
@@ -114,8 +117,8 @@
         <section class="py-16 border-t border-gray-100">
           <div class="mx-auto max-w-5xl">
             <div class="text-center mb-12">
-              <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Core Competencies</h2>
-              <p class="mt-4 text-gray-600">We bridge the gap between environmental needs and engineering possibilities.</p>
+              <h2 class="text-[#111518] text-3xl font-bold tracking-tight" data-i18n="about_competencies_title">Core Competencies</h2>
+              <p class="mt-4 text-gray-600" data-i18n="about_competencies_desc">We bridge the gap between environmental needs and engineering possibilities.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -126,8 +129,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Edge AI Vision</h3>
-                <p class="text-gray-600 text-sm">Real-time object detection and classification running directly on the device for minimal latency and maximum privacy.</p>
+                <h3 class="text-xl font-bold mb-2" data-i18n="about_comp_vision">Edge AI Vision</h3>
+                <p class="text-gray-600 text-sm" data-i18n="about_comp_vision_desc">Real-time object detection and classification running directly on the device for minimal latency and maximum privacy.</p>
               </div>
 
               <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
@@ -136,8 +139,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Soft Robotics</h3>
-                <p class="text-gray-600 text-sm">Adaptive mechanism design that can handle diverse cup shapes, separate lids, and ensure 99% stacking efficiency.</p>
+                <h3 class="text-xl font-bold mb-2" data-i18n="about_comp_robotics">Soft Robotics</h3>
+                <p class="text-gray-600 text-sm" data-i18n="about_comp_robotics_desc">Adaptive mechanism design that can handle diverse cup shapes, separate lids, and ensure 99% stacking efficiency.</p>
               </div>
 
               <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow">
@@ -146,8 +149,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12h1.5m1.5 0v-1.5m0 6.375h1.5m1.5 0v-1.5m0 6.375H12m0 0h1.5m1.5 0v-1.5m0 6.375h1.5M4.5 15.75H3m15.75 6H15.75m-1.5-1.5h-1.5m-6 0H6.375m.375 0-3-3m0 0-.375.375m.375-.375h1.5m1.5 0v-1.5m.75-5.25 1.5 1.5m0 0 1.5-1.5m-1.5 1.5v1.5m0-1.5h-1.5m1.5-1.5-1.5-1.5M12.75 3v1.5M16.5 8.25H18M16.5 12h1.5m-1.5 0v-1.5m0 6.375h1.5" />
                   </svg>
                 </div>
-                <h3 class="text-xl font-bold mb-2">Smart IoT</h3>
-                <p class="text-gray-600 text-sm">Real-time data collection on fill levels and machine status, enabling optimized route planning for waste collection.</p>
+                <h3 class="text-xl font-bold mb-2" data-i18n="about_comp_iot">Smart IoT</h3>
+                <p class="text-gray-600 text-sm" data-i18n="about_comp_iot_desc">Real-time data collection on fill levels and machine status, enabling optimized route planning for waste collection.</p>
               </div>
             </div>
           </div>
@@ -155,8 +158,8 @@
 
         <section class="py-16 sm:py-20 border-t border-gray-100">
           <div class="mx-auto max-w-5xl text-center">
-            <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Meet the Team</h2>
-            <p class="mt-4 text-gray-600 mb-12">Engineers and visionaries building the future of recycling.</p>
+            <h2 class="text-[#111518] text-3xl font-bold tracking-tight" data-i18n="about_team_title">Meet the Team</h2>
+            <p class="mt-4 text-gray-600 mb-12" data-i18n="about_team_desc">Engineers and visionaries building the future of recycling.</p>
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8">
               <div class="flex flex-col gap-3 text-center items-center group">
                 <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100 flex items-center justify-center border-2 border-transparent group-hover:border-[#1993e5] transition-all">
@@ -200,7 +203,7 @@
 
         <section class="py-16 sm:py-20 border-t border-gray-100">
           <div class="mx-auto max-w-5xl text-center">
-            <h2 class="text-[#111518] text-3xl font-bold tracking-tight">Our Values</h2>
+            <h2 class="text-[#111518] text-3xl font-bold tracking-tight" data-i18n="about_values_title">Our Values</h2>
             <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
               
               <div class="flex flex-col gap-3 rounded-xl border border-[#dbe1e6] bg-white p-6 shadow-sm">
@@ -210,8 +213,8 @@
                   </svg>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Sustainability</h3>
-                  <p class="text-gray-600 text-sm font-normal leading-normal">We utilize technology to create a tangible impact on the environment.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight" data-i18n="about_value_sustainability">Sustainability</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal" data-i18n="about_value_sustainability_desc">We utilize technology to create a tangible impact on the environment.</p>
                 </div>
               </div>
 
@@ -221,8 +224,8 @@
                     <path d="M232,128a104,104,0,0,1-208,0c0-41,23.81-76.48,59.38-92.83a8,8,0,0,1,6.62,14.56C58.15,62.83,40,93.42,40,128a88,88,0,0,0,176,0c0-34.58-18.15-65.17-50-78.27a8,8,0,1,1,6.62-14.56C208.19,51.52,232,87,232,128Zm-56-16a32,32,0,1,0,32,32A32,32,0,0,0,176,112Zm-96,0a32,32,0,1,0,32,32A32,32,0,0,0,80,112Z"></path> </svg>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Precision Engineering</h3>
-                  <p class="text-gray-600 text-sm font-normal leading-normal">We pursue high reliability through robust hardware and optimized software.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight" data-i18n="about_value_precision">Precision Engineering</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal" data-i18n="about_value_precision_desc">We pursue high reliability through robust hardware and optimized software.</p>
                 </div>
               </div>
 
@@ -233,8 +236,8 @@
                   </svg>
                 </div>
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-[#111518] text-lg font-bold leading-tight">Customer Focus</h3>
-                  <p class="text-gray-600 text-sm font-normal leading-normal">We solve real-world problems with user-centric design and feedback.</p>
+                  <h3 class="text-[#111518] text-lg font-bold leading-tight" data-i18n="about_value_customer">Customer Focus</h3>
+                  <p class="text-gray-600 text-sm font-normal leading-normal" data-i18n="about_value_customer_desc">We solve real-world problems with user-centric design and feedback.</p>
                 </div>
               </div>
 
@@ -245,7 +248,7 @@
         <div class="py-16 text-center">
           <a href="index.html">
             <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 transition-colors mx-auto">
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f3f4] text-[#111518] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 transition-colors mx-auto" data-i18n="about_back">
               <span class="truncate">Back to Home</span>
             </button>
           </a>
@@ -257,7 +260,15 @@
   <script> // 모바일 메뉴 토글
     document.getElementById('mobile-menu-btn').addEventListener('click', function () {
       const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden');
-    }); 
+    });
+
+    // 언어 전환 기능
+    const langToggle = document.getElementById('language-toggle');
+    if (langToggle) {
+      langToggle.addEventListener('click', () => {
+        setLanguage(currentLanguage === 'en' ? 'ko' : 'en');
+      });
+    }
   </script>
 </body>
 </html>
